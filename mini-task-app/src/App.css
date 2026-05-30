@@ -6,8 +6,8 @@
 }
 
 body{
-  background:#000000;
-  color:#ffffff;
+  background:#3639e6;
+  color:#0f0f0f;
 }
 
 /* CONTENEDOR */
@@ -48,7 +48,7 @@ nav ul{
 nav a{
   text-decoration:none;
 
-  color:white;
+  color:rgb(0, 0, 0);
 
   font-weight:bold;
 }
@@ -68,7 +68,7 @@ nav a:hover{
 }
 
 .hero-card{
-  background:white;
+  background:rgb(255, 255, 255);
 
   padding:50px;
 
@@ -226,13 +226,13 @@ select{
 }
 
 .stats-header h1{
-  color:#2563eb;
+  color:#ffffff;
 
   margin-bottom:10px;
 }
 
 .stats-header p{
-  color:#64748b;
+  color:#ffffff;
 }
 
 .stats-grid{

@@ -37,7 +37,7 @@ function TaskForm({ addTask }: Props) {
         onChange={(e) => setPriority(e.target.value)}
       >
         <option>Alta</option>
-        <option>Media</option>
+        <option>Medio</option>
         <option>Baja</option>
       </select>
 
