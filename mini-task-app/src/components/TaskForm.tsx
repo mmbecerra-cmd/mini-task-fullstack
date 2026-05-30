@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { Input, Button, Select } from "antd";
+
 interface Props {
   addTask: (title: string, priority: string) => void;
 }
@@ -13,7 +15,7 @@ function TaskForm({ addTask }: Props) {
 
     e.preventDefault();
 
-    if(title.trim() === "") return;
+    if (title.trim() === "") return;
 
     addTask(title, priority);
 
@@ -25,25 +27,31 @@ function TaskForm({ addTask }: Props) {
 
     <form className="task-form" onSubmit={handleSubmit}>
 
-      <input
-        type="text"
+      <Input
         placeholder="Ingrese una tarea..."
         value={title}
         onChange={(e) => setTitle(e.target.value)}
+        size="large"
       />
 
-      <select
+      <Select
         value={priority}
-        onChange={(e) => setPriority(e.target.value)}
-      >
-        <option>Alta</option>
-        <option>Medio</option>
-        <option>Baja</option>
-      </select>
+        size="large"
+        onChange={(value) => setPriority(value)}
+        options={[
+          { value: "Alta", label: "Alta" },
+          { value: "Media", label: "Media" },
+          { value: "Baja", label: "Baja" },
+        ]}
+      />
 
-      <button type="submit">
+      <Button
+        type="primary"
+        htmlType="submit"
+        size="large"
+      >
         Agregar
-      </button>
+      </Button>
 
     </form>
 
